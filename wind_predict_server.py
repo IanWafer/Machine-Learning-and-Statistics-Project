@@ -1,20 +1,35 @@
-# flask for web app.
 import flask as fl
-# numpy for numerical work.
 import numpy as np
+from tensorflow.keras.models import model_from_json
+from flask import Flask, url_for, request, redirect, abort, jsonify
 
-# Create a new web app.
+#Create a new web app.
 app = fl.Flask(__name__)
 
 # Add root route.
 @app.route("/")
 def home():
   return app.send_static_file("index.html")
+# Prediction routine to run here
 
-# Add normal route.
-@app.route('/api/normal')
-def wind_predict():
-  return {"value": }
+def model_predict(wind):
+    wind = float(wind)
+    # load json and create model
+    json_file = open('model.json', 'r')
+    loaded_model_json = json_file.read()
+    json_file.close()
+    loaded_model = model_from_json(loaded_model_json)
 
-if __name__ == "__main__":
+    # load weights into new model
+    loaded_model.load_weights("model.h5")
+    print("Loaded model from disk")
+    power = loaded_model.predict([wind])
+    power = round(float(power), 2)
+    return power
+
+@app.route("/api/power/<wind>")
+def power_predict(wind):
+    return {"power" : model_predict(wind)}
     
+if __name__ == "__main__":
+    app.run(debug= True)
