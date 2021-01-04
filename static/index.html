@@ -57,7 +57,7 @@
 
         // Adapted from stack overflow post https://stackoverflow.com/questions/7685770/getjson-not-worked-inside-clickfunction/7685819#7685819
             $.getJSON("/api/power/"+wind, function(data) {
-                $('#output').val(data.power);
+                $('#power').val(data.power);
                 console.log("Wind speed " + wind + " gives power output of " + data.power);
             });
         });

@@ -32,4 +32,4 @@ def power_predict(wind):
     return {"power" : model_predict(wind)}
     
 if __name__ == "__main__":
-    app.run(debug= True)
+    app.run(debug= True) 
