@@ -14,18 +14,26 @@ def home():
 
 def model_predict(wind):
     wind = float(wind)
-    # load json and create model
-    json_file = open('model.json', 'r')
-    loaded_model_json = json_file.read()
-    json_file.close()
-    loaded_model = model_from_json(loaded_model_json)
 
-    # load weights into new model
-    loaded_model.load_weights("model.h5")
-    print("Loaded model from disk")
-    power = loaded_model.predict([wind])
-    power = round(float(power), 2)
+    #Power generation doesnt begin until 0.325m/s and cuts off at 24.499m/s as per data received
+    if 0.325 < wind < 24.499:
+        # load json and create model
+        json_file = open('model.json', 'r')
+        loaded_model_json = json_file.read()
+        json_file.close()
+        loaded_model = model_from_json(loaded_model_json)
+
+        # load weights into new model
+        loaded_model.load_weights("model.h5")
+        print("Loaded model from disk")
+        power = loaded_model.predict([wind])
+        power = round(float(power), 2)
+        
+    else:
+        power = "Value outside power generation parameters"
+
     return power
+        
 
 @app.route("/api/power/<wind>")
 def power_predict(wind):
