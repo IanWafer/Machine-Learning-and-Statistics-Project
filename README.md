@@ -28,6 +28,6 @@ To test any of the scripts within the notebook double click the cell to enter th
 
 ### Setting up the virtual environment
 To open a virtual environment to run only the required packages and versions required run the following commands
-~~~ python -m venv venv ~~~
-~~~ .\venv\Scripts\activate.bat ~~~
-~~~ pip install -r requirements.txt ~~~
+~~~ python -m venv venv
+.\venv\Scripts\activate.bat
+pip install -r requirements.txt ~~~
