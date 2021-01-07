@@ -23,7 +23,7 @@
     <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <input class="form-control" id="wind" type="float" placeholder="Wind Speed in m/s">
+            <input class="form-control" id="wind" type="text" placeholder="Wind Speed in m/s">
           </div>
         </div>
         <div class="row">
@@ -60,9 +60,9 @@
         });
 
         function validateForm() {
-          var x = document.forms["wind"]["fname"].value;
+          var x = document.forms["wind"].value;
           if (x == "") {
-            alert("Name must be filled out");
+            alert("Wind speed must be entered");
             return false;
   }
 }
