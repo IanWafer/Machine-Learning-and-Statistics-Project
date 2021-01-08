@@ -1,11 +1,11 @@
 # Machine Learning and Statistics Project
 
-Student: Ian Wafer
-Student no.: G00376322
-Email: g00376322@gmit
+Student: Ian Wafer  
+Student no.: G00376322  
+Email: g00376322@gmit  
 
-Lecturer: Ian McLoughlin
-Due date: 08/01/21
+Lecturer: Ian McLoughlin  
+Due date: 08/01/21  
 
 ***
 
@@ -30,18 +30,18 @@ This repository contains my project submission on power prediction based on wind
 - static/index.html: web application  host location.  
 - Licence: standard licence.  
 
-### Packages Used
-* pandas
-* numpy
-* seaborn
-* matplotlib.pyplot
-* pylab
-* sklearn  
-* sklearn.linear_model
-* sklearn.preprocessing
-* tensorflow.keras
-* collections
-* sklearn.pipeline
+### Packages Used (With link to documentation)
+* [pandas](https://pandas.pydata.org/)
+* [numpy](https://numpy.org/)
+* [seaborn](https://seaborn.pydata.org/)
+* [matplotlib.pyplot](https://matplotlib.org/)
+* [pylab](https://matplotlib.org/api/pyplot_api.html)
+* [sklearn] (https://scikit-learn.org/stable/) 
+* [sklearn.linear_model](https://scikit-learn.org/stable/modules/linear_model.html)
+* [sklearn.preprocessing](https://scikit-learn.org/stable/modules/preprocessing.html)
+* [tensorflow.keras](https://www.tensorflow.org/guide/keras/sequential_model)
+* [collections](https://docs.python.org/3/library/collections.html)
+* [sklearn.pipeline](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html)
 
 
 ### How to download this repository
