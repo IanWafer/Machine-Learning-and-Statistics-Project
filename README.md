@@ -36,13 +36,14 @@ This repository contains my project submission on power prediction based on wind
 * [seaborn](https://seaborn.pydata.org/)
 * [matplotlib.pyplot](https://matplotlib.org/)
 * [pylab](https://matplotlib.org/api/pyplot_api.html)
-* [sklearn] (https://scikit-learn.org/stable/) 
+* [sklearn](https://scikit-learn.org/stable/) 
 * [sklearn.linear_model](https://scikit-learn.org/stable/modules/linear_model.html)
 * [sklearn.preprocessing](https://scikit-learn.org/stable/modules/preprocessing.html)
 * [tensorflow.keras](https://www.tensorflow.org/guide/keras/sequential_model)
 * [collections](https://docs.python.org/3/library/collections.html)
 * [sklearn.pipeline](https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html)
 
+***
 
 ### How to download this repository
 Go to Github profile located here- [link](https://github.com/IanWafer)  
@@ -58,6 +59,7 @@ Your default browser window should be open now in the Jupyter interface. Select 
 To run all of the code click the cell button from the menu at the top of the browser window and select Run All.  
 To test any of the scripts within the notebook double click the cell to enter the edit mode and press shift + enter to run the code.  
 
+***
 
 ### Setting up the virtual environment
 To open a virtual environment to run only the required packages and versions required run the following commands
@@ -77,6 +79,8 @@ This should result in the following in the command line interface-
 ![Server Running](https://github.com/IanWafer/Machine-Learning-and-Statistics-Project/blob/main/Images/server_running.PNG)
 
 When the server is up and running use the browser to navigate to 127.0.0.1:5000/ to bring you to the web interface. From here a wind speed between 0 and 25 can be entered. Note any value below 0.325 and above 24.499  will result in a score of 0 as this is the start up speed required for power generation on the low end and the system cut off on the high end.
+
+***
 
 ### Docker Container
 To build a docker image of this application you need to navigate to the main folder structure and use the following commend
