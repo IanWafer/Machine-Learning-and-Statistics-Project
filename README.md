@@ -7,10 +7,14 @@ Email: g00376322@gmit
 Lecturer: Ian McLoughlin
 Due date: 08/01/21
 
+***
+
 Below are the instructions we have been issued to complete for the machine learning and statistics end of term project-
-![Instructions](/images/instructions.png 'Instructions')
+![Instructions](https://github.com/IanWafer/Machine-Learning-and-Statistics-Project/blob/main/Images/instructions.PNG)
 
 This repository contains my project submission on power prediction based on wind speed - [link](https://github.com/IanWafer/Machine-Learning-and-Statistics-Project)
+
+***
 
 ### Contents of submission
 - powerproduction.txt: original  dataset received.  
@@ -70,6 +74,17 @@ python wind-server-predict.py
 ~~~
 
 This should result in the following in the command line interface-
-![Server Running](/images/server_running.png 'Server running')
+![Server Running](https://github.com/IanWafer/Machine-Learning-and-Statistics-Project/blob/main/Images/server_running.PNG)
 
 When the server is up and running use the browser to navigate to 127.0.0.1:5000/ to bring you to the web interface. From here a wind speed between 0 and 25 can be entered. Note any value below 0.325 and above 24.499  will result in a score of 0 as this is the start up speed required for power generation on the low end and the system cut off on the high end.
+
+### Docker Container
+To build a docker image of this application you need to navigate to the main folder structure and use the following commend
+~~~
+docker build -t wind-predict-app .
+~~~
+
+Then to run the image use the below commands 
+~~~
+docker -run -d -p 5000:5000 wind-predict-app
+~~~
